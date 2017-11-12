@@ -1,13 +1,10 @@
 # H264BSAnalyzer -- H.264/AVC H.265/HEVC码流分析工具
-=======================
 
 ## 工程说明
-=======================
 VS2010 MFC工程，使用h264bitstream开源项目实现对H.264码流分析。<br>
 H.265分析以h264bitstream为参考基准代码，同时参考HM16.6代码。
 
 ## 功能
-=======================
 * 支持不同NAL的显示，包括VPS、SPS、PPS、SEI、AUD、Slice的解析。
 * 支持显示NAL十六进制数据。
 * 支持上下光标移动显示详细信息。
@@ -23,13 +20,11 @@ H.265分析以h264bitstream为参考基准代码，同时参考HM16.6代码。
 * 支持保存为AVI、MP4、MOV格式视频文件。
 
 ## 用法
-=======================
 菜单File->Open选项；或者直接拖曳文件至工具界面。<br>
 工具会自动解析。双击某一项即可查看具体的NAL信息。<br>
 点击“Play”菜单出现播放子窗口。
 
 ## 界面
-=======================
 V1.2版本界面：<br>
 ![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v1.2.png)
 
@@ -52,7 +47,6 @@ V3.0版本H265分析界面：<br>
 ![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v3.0_h265.png)
   
 ## 版本变更
-=======================
 编译好的工具位于release目录中。<br>
 * v1.x <br>
 > H264码流分析功能完成。
@@ -77,21 +71,18 @@ V3.0版本H265分析界面：<br>
 > 支持保存为AVI、MP4、MOV格式视频文件。
 
 ## 测试
-=======================
 本工程使用H264Visa、CodecVisa及HM工具对比测试。<br>
 所用视频文件为x264/x265编码生成，另外使用H.265测试序列。<br>
 本工具仅在Windows 7 64bit操作系统中运行测试通过。
 
 ## 可能潜在问题
-=======================
 分析大文件较慢，可能会崩溃。<br>
 本工具虽使用众多文件、工具对比分析，但无法满足所有条件，个别语法可能分析有误。<br>
 H.265保存为AVI格式视频无法播放。注：使用ffmpeg转换，用ffplay也无法正常播放。<br>
 可自行修正，也可反馈给作者。<br>
 
-## 版权协议
-=======================
-* 版权所有[迟思堂工作室 李迟](http://www.latelee.org)
+## 协议
+* 版权所有 [迟思堂工作室 李迟](http://www.latelee.org)
 * 修正h264bitstream个别bug。详见代码。
 * 基于h264bitstream适应性修改的代码，遵从LGPL协议。
 * 本工程源码使用LGPL协议。
@@ -102,8 +93,6 @@ H.265保存为AVI格式视频无法播放。注：使用ffmpeg转换，用ffplay也无法正常播放。<br>
 感谢 [雷霄骅](http://blog.csdn.net/leixiaohua1020) ！斯人已逝，精神长存！
 
 ## 作者
-=======================
-思堂工作室 李迟 <br>
-[迟思堂工作室](http://www.latelee.org)
-
+思堂工作室 李迟 li@latelee.org<br>
+[迟思堂工作室](http://www.latelee.org) <br>
 [欢迎捐赠支持作者](http://www.latelee.org/donate)
