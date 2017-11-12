@@ -64,16 +64,16 @@ V3.0版本H265分析界面：<br>
 > 部分SEI信息未做解析；H264帧率计算可能不准确(是真实帧率的2倍)。<br>
 
 * v3.0 <br>
-> 使用cppcheck进行检测，修复个别错误语句。
-> 支持播放H.264、H.265裸码流文件。
-> 具备暂停、停止、逐帧播放功能。
-> 支持保存为RGB(24bit)、YUV(yuv420p)原始文件，支持保存为BMP、JPEG图片。
-> 支持保存为AVI、MP4、MOV格式视频文件。
+> 使用cppcheck进行检测，修复个别语句错误之处。<br>
+> 支持播放H.264、H.265裸码流文件。ffmpeg最小编译，静态链接。<br>
+> 具备暂停、停止、逐帧播放功能。<br>
+> 支持保存为RGB(24bit)、YUV(yuv420p)原始文件，支持保存为BMP、JPEG图片。<br>
+> 支持保存为AVI、MP4、MOV格式视频文件。<br>
 
 ## 测试
 本工程使用H264Visa、CodecVisa及HM工具对比测试。<br>
 所用视频文件为x264/x265编码生成，另外使用H.265测试序列。<br>
-本工具仅在Windows 7 64bit操作系统中运行测试通过。
+本工具仅在Windows 7 64bit操作系统中运行测试通过。<br>
 
 ## 可能潜在问题
 分析大文件较慢，可能会崩溃。<br>
@@ -90,9 +90,9 @@ H.265保存为AVI格式视频无法播放。注：使用ffmpeg转换，用ffplay也无法正常播放。<br>
 
 ## 致谢
 本工程于2014年2月因工作需要，无意看到雷霄骅博士之文章，于其基础上修改、重构、不断完善。<br>
-感谢 [雷霄骅](http://blog.csdn.net/leixiaohua1020) ！斯人已逝，精神长存！
+感谢 [雷霄骅](http://blog.csdn.net/leixiaohua1020) 博士！斯人已逝，精神长存！
 
 ## 作者
-思堂工作室 李迟 li@latelee.org<br>
+思堂工作室 李迟<br>
 [迟思堂工作室](http://www.latelee.org) <br>
 [欢迎捐赠支持作者](http://www.latelee.org/donate)
