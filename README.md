@@ -1,3 +1,105 @@
+# H264BSAnalyzer -- H.264/AVC H.265/HEVC bitstream analyze tool
+
+## Project
+VS2010 MFC project, using h264bitstream to implement H.264 bitstream analyze.<br>
+The code for H.265 bitstream analyzing is based on h264bitstream code and HM16.6.
+
+## Project Feature
+* support different NAL display, including VPS, SPS, PPS, SEI, AUD, Slice.
+* support hex data display for NAL.
+* support displaying detail information using cursor up and down.
+* support different color for different slice, with frame number.
+* auto parse file name.
+* support file name suffix:
+    * H.264 format file: .h264,.h264, .avc
+    * H.265 format file: .h26, .h265, .hevc
+    * auto decide format acording file content if no name suffix specify listing above.
+* support playing H.264、H.265 bitstream video file.
+* pause, stop, play frame by frame for video file.
+* support saving for RGB(24bit) and YUV(yuv420p) file, BMP, JPEG (picture) file.
+* support  saving for AVI, MP4, MOV format file.
+
+## Usage
+Click menu File->OPen option, or drag file to the main window, <br>
+and the tool will auto parse file cotent. <br>
+double click the item in the main windows will show the detail NAL information.<br>
+to play the file, click "Play".
+
+## Window view
+V1.2 main window: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v1.2.png)
+
+V2.0 main window for h.264: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v2.0_h264.png)
+
+V2.0 main window for h.265: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v2.0_h265.png)
+
+V2.1 main window for h.264: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v2.1_h264.png)
+
+V2.1 main window for h.265: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v2.1_h265.png)
+
+V3.0 main window for h.264: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v3.0_h264.png)
+
+V3.0 main window for h.265: <br>
+![GUI](https://github.com/latelee/H264BSAnalyzer/blob/master/screenshots/v3.0_h265.png)
+  
+## Changelog
+The binary file will locate in release directory. <br>
+* v1.x <br>
+> Complet H.264 bitstream analyze.
+ 
+* v2.0 <br>
+> Delete manual start function in v1.x.<br>
+> Add for H.265/HEVC bitstream analyze.<br>
+> Other update.<br>
+
+* v2.1 <br>
+> Dispaly bitstream information using CTreeCtrl, ref project: H264Visa、H264VideoESViewer.<br>
+> Add windows resize.<br>
+> Other update.<br>
+> Some problems: <br>
+> Not decode some SEI information, the H.264 frame rate calcuration may be inaccurate(2x for real frame rate).<br>
+
+* v3.0 <br>
+> fix code using cppcheck.<br>
+> support play H.264、H.265 bitstream, minimize compile ffmpeg, static link.<br>
+> pause, stop, play frame by frame for video file.<br>
+> support saving for RGB(24bit) and YUV(yuv420p) file, BMP, JPEG (picture) file.<br>
+> support  saving for AVI, MP4, MOV format file.<br>
+
+## Testing
+The tool is testing width H264Visa, CodecVisa and HM tool.<br>
+The testing file is generating by x264/x265 tool, also use some H.265 test sequence file<br>
+Only test under Windows 7 64bit OS.<br>
+
+## Some bug
+Parsing big file will be slow, and may be crash.<br>
+Same slice information may be wrong.<br>
+The avi file saving for h.265 can't be play. Note: it can't be play by ffplay.<br>
+You ca fix yourself, and let me know.<br>
+
+## Protocol
+* Copyright [CST studio Late Lee](http://www.latelee.org)
+* Fix some bug for h264bitstream, see the code.
+* The code comes from h264bitstream, is LGPL.
+* Total code is LGPL.
+* You can use the code for study, and commercial purposes, but give no guarantee.
+
+## Thanks
+This project started at Feb, 2014 for work need, and see the article written by Dr leixiaohua, <br>
+and then rewrite the code, refactor the code, and make improve.<br>
+Tanks to [雷霄骅](http://blog.csdn.net/leixiaohua1020) , He's gone, but will last spirit.
+
+## Author
+CST studio Late Lee<br>
+[CST studio](http://www.latelee.org) <br>
+[Donate the author](http://www.latelee.org/donate)
+
+
 # H264BSAnalyzer -- H.264/AVC H.265/HEVC码流分析工具
 
 ## 工程说明
